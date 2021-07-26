@@ -2,6 +2,8 @@
 
 ## Table of Contents
 
-| assignment                    | link                                             |
-| -----------                   | -----------                                      |
-| array-reverse                 | [link](array-reverse/README.md)                  |
+| assignment                         | link                                             |
+| -----------                        | -----------                                      |
+| array-reverse                      | [link](array-reverse/README.md)                  |
+| array-insert-shift                 | [link](array-insert-shift/README.md)             |
+
