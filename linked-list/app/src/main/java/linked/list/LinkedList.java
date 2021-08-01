@@ -32,6 +32,53 @@ public class LinkedList {
         printResult+="NULL";
         return printResult;
     }
+
+    // lab 6 insertions
+
+    public void append(int num){
+        Node newNode = new Node(num);
+        if (head != null) {
+            Node current = head;
+            while (current.next!= null){
+                current=current.next;
+            }
+            current.next = newNode;
+        }else{
+            head=newNode;
+        }
+    }
+
+    public void insertBefore(int num , int newNum){
+        Node current = head;
+        Node newNode = new Node(newNum);
+        while(current.next != null && current.next.value != num && current.value != num){
+            current= current.next;
+        }
+        if(current == head) {
+            insert(newNum);
+        }else if(current.next != null){
+            newNode.next = current.next;
+            current.next= newNode;
+        }
+    }
+
+    public void insertAfter(int num , int newNum){
+        Node newNode = new Node(newNum);
+        Node current = head;
+
+
+        while(current.next != null && current.value != num){
+            current= current.next;
+        }
+
+        if (current.value == num){
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+
+
+
+    }
 }
 
 

@@ -16,7 +16,12 @@ public class App {
         testList.insert(3);
         testList.insert(2);
 
-        System.out.println(testList.includes(3));
+        testList.append(1);
+        testList.insertBefore(1,4);
+
+        testList.insertAfter(13,14);
+
+//        System.out.println(testList.includes(3));
 
         System.out.println(testList.toString());
     }
