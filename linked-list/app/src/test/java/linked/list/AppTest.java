@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
+    @Test void linkedListTest() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
 
@@ -42,6 +42,41 @@ class AppTest {
 
         //Can properly return a collection of all the values that exist in the linked list
         assertEquals("{2} -> {3} -> {4} -> NULL" , test.toString());
+
+
+
+
+//        Can successfully add a node to the end of the linked list
+          test.append(7);
+          assertEquals("{2} -> {3} -> {4} -> {7} -> NULL",test.toString());
+
+
+//        Can successfully add multiple nodes to the end of a linked list
+        test.append(8);
+        test.append(9);
+        assertEquals("{2} -> {3} -> {4} -> {7} -> {8} -> {9} -> NULL",test.toString());
+
+
+//        Can successfully insert a node before a node located in the middle of a linked list
+        test.insertBefore(7,6);
+        assertEquals("{2} -> {3} -> {4} -> {6} -> {7} -> {8} -> {9} -> NULL",test.toString());
+
+
+//        Can successfully insert a node before the first node of a linked list
+        test.insertBefore(2,1);
+        assertEquals("{1} -> {2} -> {3} -> {4} -> {6} -> {7} -> {8} -> {9} -> NULL",test.toString());
+
+
+//        Can successfully insert after a node in the middle of the linked list
+        test.insertAfter(4,5);
+        assertEquals("{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> {7} -> {8} -> {9} -> NULL",test.toString());
+
+
+//        Can successfully insert a node after the last node of the linked list
+        test.insertAfter(9,10);
+        assertEquals("{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> {7} -> {8} -> {9} -> {10} -> NULL",test.toString());
+
+
 
     }
 }
