@@ -9,7 +9,7 @@ public class App {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         LinkedList testList = new LinkedList();
         testList.insert(5);
@@ -24,5 +24,7 @@ public class App {
 //        System.out.println(testList.includes(3));
 
         System.out.println(testList.toString());
+
+        System.out.println(testList.kthFromEnd(2));
     }
 }

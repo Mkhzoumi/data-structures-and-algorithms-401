@@ -1,5 +1,7 @@
 package linked.list;
 
+import java.util.ArrayList;
+
 public class LinkedList {
     Node head;
 
@@ -76,7 +78,24 @@ public class LinkedList {
             current.next = newNode;
         }
 
+    }
 
+    public int kthFromEnd (int k) {
+        ArrayList<Integer> nodesValue = new ArrayList<>();
+        int value=0;
+        Node current = head;
+
+        while (current != null){
+            nodesValue.add(current.value);
+            current= current.next;
+        }
+        try {
+            value =(nodesValue.get((nodesValue.size()-1) - k));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return value;
 
     }
 }

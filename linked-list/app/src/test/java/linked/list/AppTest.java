@@ -78,7 +78,38 @@ class AppTest {
 
 
 
+        // code challenge 06
+
+        //Where k and the length of the list are the same
+        //this will return a value of 0 and though an exception
+        assertEquals(0,test.kthFromEnd(10));
+
+
+//        Where k is greater than the length of the linked list
+        //this also return a value of 0 and through an exception
+        assertEquals(0,test.kthFromEnd(15));
+
+
+//        Where k is not a positive integer
+        //this also return a value of 0 and through an exception
+        assertEquals(0,test.kthFromEnd(-4));
+
+
+//        Where the linked list is of a size 1
+        LinkedList newList = new LinkedList();
+        newList.insert(1);
+        assertEquals(1,newList.kthFromEnd(0));
+
+
+//    Happy Path where k is not at the end, but somewhere in the middle of the linked list
+        assertEquals(7, test.kthFromEnd(3));
+
+
+
+
     }
+
+
 }
 
 
