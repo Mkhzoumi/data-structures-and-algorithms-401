@@ -4,6 +4,8 @@
 package linked.list;
 
 import org.junit.jupiter.api.Test;
+
+import static linked.list.App.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -110,6 +112,50 @@ class AppTest {
     }
 
 
+    @Test void zipTwoLinkedListTest(){
+
+        // two linked lists with the same size
+        LinkedList testList = new LinkedList();
+        testList.append(1);
+        testList.append(3);
+        testList.append(5);
+
+        LinkedList testList2 = new LinkedList();
+        testList2.append(2);
+        testList2.append(4);
+        testList2.append(6);
+        assertEquals("{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> NULL",zipTwoLinkedLists(testList,testList2).toString());
+
+
+        // two linked lists with different sizes
+        LinkedList test1= new LinkedList();
+        test1.append(1);
+        test1.append(3);
+
+        LinkedList test2 = new LinkedList();
+        test2.append(2);
+        test2.append(4);
+        test2.append(6);
+        assertEquals("{1} -> {2} -> {3} -> {4} -> {6} -> NULL",zipTwoLinkedLists(test1,test2).toString());
+
+
+        // two linked lists with one of them is empty
+        LinkedList test3= new LinkedList();
+
+        LinkedList test4 = new LinkedList();
+        test4.append(2);
+        test4.append(4);
+        test4.append(6);
+        assertEquals("{2} -> {4} -> {6} -> NULL",zipTwoLinkedLists(test3,test4).toString());
+
+
+        // two linked lists are empty
+        LinkedList test5= new LinkedList();
+
+        LinkedList test6 = new LinkedList();
+
+        assertEquals("NULL",zipTwoLinkedLists(test5,test6).toString());
+    }
 }
 
 
