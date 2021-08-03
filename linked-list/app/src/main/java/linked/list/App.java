@@ -25,8 +25,8 @@ public class App {
 //
 //        System.out.println(testList.toString());
 //
-//        System.out.println(testList.kthFromEnd(2));
-
+//        System.out.println(testList.kthFromEnd(4));
+//
         LinkedList testList = new LinkedList();
         testList.insert(8);
         testList.insert(5);
