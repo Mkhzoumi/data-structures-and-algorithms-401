@@ -10,21 +10,62 @@ public class App {
 
 
     public static void main(String[] args) throws Exception {
+//
+//        LinkedList testList = new LinkedList();
+//        testList.insert(5);
+//        testList.insert(3);
+//        testList.insert(2);
+//
+//        testList.append(1);
+//        testList.insertBefore(1,4);
+//
+//        testList.insertAfter(13,14);
+//
+////        System.out.println(testList.includes(3));
+//
+//        System.out.println(testList.toString());
+//
+//        System.out.println(testList.kthFromEnd(2));
 
         LinkedList testList = new LinkedList();
+        testList.insert(8);
         testList.insert(5);
         testList.insert(3);
-        testList.insert(2);
+        testList.insert(1);
 
-        testList.append(1);
-        testList.insertBefore(1,4);
+        LinkedList testList2 = new LinkedList();
 
-        testList.insertAfter(13,14);
 
-//        System.out.println(testList.includes(3));
+        testList2.insert(4);
+        testList2.insert(2);
 
-        System.out.println(testList.toString());
+        System.out.println(testList);
+        System.out.println(testList2);
 
-        System.out.println(testList.kthFromEnd(2));
+
+
+        System.out.println(zipTwoLinkedLists(testList,testList2));
+
+    }
+
+
+
+    public static LinkedList zipTwoLinkedLists(LinkedList a , LinkedList b){
+        Node currentA = a.head;
+        Node currentB = b.head;
+        while(true){
+            if (currentA != null && currentB != null){
+                a.insertAfter(currentA.value , currentB.value);
+                currentA = currentA.next;
+                currentA = currentA.next;
+                currentB=currentB.next;
+            }else if(currentA == null && currentB !=null){
+                a.append(currentB.value);
+                currentB=currentB.next;
+            }else{
+                break;
+            }
+        }
+        return a;
     }
 }
