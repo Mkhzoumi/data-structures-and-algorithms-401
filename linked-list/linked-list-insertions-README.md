@@ -10,6 +10,10 @@ because we used a while loop.
 time = big O(n)
 space= big O(1)
 
+## whiteboard
+
+![insertion](insertions.jpg)
+
 ## Solution
 example of the code : 
 
