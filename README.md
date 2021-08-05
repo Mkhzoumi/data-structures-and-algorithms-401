@@ -11,6 +11,8 @@
 | linked list insertions             | [link](linked-list/linked-list-insertions-README.md)  |
 | linked list kth                    | [link](linked-list-kth/README.md)                     |
 | Zipped linked list                 | [link](linked-list-zip/README.md)                     |
+| Stack and Queue                    | [link](stack-and-queue/README.md)                     |
+
 
 
 

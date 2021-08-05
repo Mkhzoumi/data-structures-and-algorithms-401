@@ -3,6 +3,8 @@
  */
 package linked.list;
 
+import java.util.ArrayList;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -33,18 +35,21 @@ public class App {
         testList.insert(3);
         testList.insert(1);
 
-        LinkedList testList2 = new LinkedList();
-
-
-        testList2.insert(4);
-        testList2.insert(2);
+//        LinkedList testList2 = new LinkedList();
+//
+//
+//        testList2.insert(4);
+//        testList2.insert(2);
+//
+//        System.out.println(testList);
+//        System.out.println(testList2);
+//
+//
+//
+//        System.out.println(zipTwoLinkedLists(testList,testList2));
 
         System.out.println(testList);
-        System.out.println(testList2);
-
-
-
-        System.out.println(zipTwoLinkedLists(testList,testList2));
+        System.out.println(reverseLinkedList(testList));
 
     }
 
@@ -67,5 +72,30 @@ public class App {
             }
         }
         return a;
+    }
+
+
+
+    public static LinkedList reverseLinkedList(LinkedList list){
+        LinkedList reverseList = new LinkedList();
+        ArrayList<Integer> arrList = new ArrayList<>();
+        Node currList = list.head;
+
+        while (currList != null){
+           arrList.add(currList.value);
+
+            currList = currList.next;
+        }
+
+        for (int i = 0; i < arrList.size(); i++) {
+            Node addedNode = new Node(arrList.get(i));
+            if (reverseList.head != null) {
+                addedNode.next = reverseList.head;
+            }
+            reverseList.head=addedNode;
+        }
+
+
+        return reverseList;
     }
 }
