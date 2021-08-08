@@ -1,11 +1,11 @@
 package stack.and.queue;
 
-public class Queue <T> {
+public class Queue <T>{
     Node<T> front;
     Node<T> rear;
 
     public void enqueue(T value){
-        Node<T> newNode = new Node<>(value);
+        Node<T> newNode = new Node<T>(value);
         if (front != null){
            rear.next = newNode;
            rear=newNode;

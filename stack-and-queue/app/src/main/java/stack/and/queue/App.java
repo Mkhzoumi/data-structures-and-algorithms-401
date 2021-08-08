@@ -11,19 +11,34 @@ public class App {
     public static void main(String[] args) {
 
 
-        Stack<Integer> newS = new Stack<>();
-        newS.push(4);
-        System.out.println(newS.top.value);
-        newS.pop();
-        System.out.println(newS.isEmpty());
+//        Stack<Integer> newS = new Stack<>();
+//        newS.push(4);
+//        System.out.println(newS.top.value);
+//        newS.pop();
+//        System.out.println(newS.isEmpty());
+//
+//
+//
+//        Queue<Integer> newQ = new Queue<>();
+//        newQ.enqueue(6);
+//        System.out.println(newQ.dequeue());
+
+        PseudoQueue<Integer> test = new PseudoQueue<>();
+        test.enqueue(5);
+        test.enqueue(9);
+        test.enqueue(10);
 
 
+//        System.out.println(test.enqueue(4).toString());
 
-        Queue<Integer> newQ = new Queue<>();
-        newQ.enqueue(6);
-        System.out.println(newQ.dequeue());
+        System.out.println(test.instance1.toString());
 
+        System.out.println(test.dequeue());
+        System.out.println(test.dequeue());
+        System.out.println(test.dequeue());
+        System.out.println(test.dequeue());
 
+//        System.out.println(test.instance1.toString());
 
 
 
