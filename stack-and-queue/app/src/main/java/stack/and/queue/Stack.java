@@ -37,4 +37,18 @@ public class Stack <T>{
     public boolean isEmpty(){
         return top == null;
     }
+
+    @Override
+    public String toString() {
+        Node<T> current = new Node<>(null);
+        current = this.top;
+        String stack = "";
+        while (current != null){
+            stack = stack+ "{"+current.value+"} => ";
+            current = current.next;
+        }
+        stack+="Null";
+
+        return stack;
+    }
 }
