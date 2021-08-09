@@ -13,6 +13,8 @@
 | Zipped linked list                 | [link](linked-list-zip/README.md)                     |
 | Stack and Queue                    | [link](stack-and-queue/README.md)                     |
 | Psudo Queue                        | [link](stack-queue-pseudo/README.md)                  |
+| stack queue animal shelter         | [link](stack-queue-animal-shelter/README.md)          |
+
 
 
 
