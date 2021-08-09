@@ -22,23 +22,32 @@ public class App {
 //        Queue<Integer> newQ = new Queue<>();
 //        newQ.enqueue(6);
 //        System.out.println(newQ.dequeue());
-
-        PseudoQueue<Integer> test = new PseudoQueue<>();
-        test.enqueue(5);
-        test.enqueue(9);
-        test.enqueue(10);
+//
+//        PseudoQueue<Integer> test = new PseudoQueue<>();
+//        test.enqueue(5);
+//        test.enqueue(9);
+//        test.enqueue(10);
 
 
 //        System.out.println(test.enqueue(4).toString());
 
-        System.out.println(test.instance1.toString());
-
-        System.out.println(test.dequeue());
-        System.out.println(test.dequeue());
-        System.out.println(test.dequeue());
-        System.out.println(test.dequeue());
+//        System.out.println(test.instance1.toString());
+//
+//        System.out.println(test.dequeue());
+//        System.out.println(test.dequeue());
+//        System.out.println(test.dequeue());
+//        System.out.println(test.dequeue());
 
 //        System.out.println(test.instance1.toString());
+
+
+        AnimalShelter test = new AnimalShelter();
+        Animal animal = new Cat();
+        test.enqueue(animal);
+        System.out.println(test.dequeue("cat"));
+        System.out.println(test.dequeue("cat"));
+
+
 
 
 
