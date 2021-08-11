@@ -88,4 +88,29 @@ class AppTest {
 
 
     }
+
+
+
+    @Test void stackQueuePsudo(){
+
+        // testing that its enqueue properly
+        PseudoQueue<Integer> test = new PseudoQueue<>();
+        test.enqueue(5);
+        assertEquals(5,test.instance1.peek());
+
+
+        //testing that it can enqueue multiple values
+        test.enqueue(7);
+        test.enqueue(8);
+        assertEquals("{5} => {7} => {8} => Null",test.instance1.toString());
+
+        // testing that it dequeue properly
+        assertEquals(5,test.dequeue());
+
+        //testing that dequeueing from an empty queue should return null
+        PseudoQueue<Integer> test1 = new PseudoQueue<>();
+        assertNull(test1.dequeue());
+    }
 }
+
+
