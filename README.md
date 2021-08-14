@@ -15,6 +15,8 @@
 | Psudo Queue                        | [link](stack-queue-pseudo/README.md)                  |
 | stack queue animal shelter         | [link](stack-queue-animal-shelter/README.md)          |
 | trees                              | [link](trees/README.md)                               |
+| validate brackets                  | [link](stack-queue-brackets/README.md)                |
+
 
 
 
