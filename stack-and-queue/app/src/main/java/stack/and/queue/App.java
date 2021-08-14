@@ -10,7 +10,6 @@ public class App {
 
     public static void main(String[] args) {
 
-
 //        Stack<Integer> newS = new Stack<>();
 //        newS.push(4);
 //        System.out.println(newS.top.value);
@@ -41,15 +40,32 @@ public class App {
 //        System.out.println(test.instance1.toString());
 
 
-        AnimalShelter test = new AnimalShelter();
-        Animal animal = new Cat();
-        test.enqueue(animal);
-        System.out.println(test.dequeue("cat"));
-        System.out.println(test.dequeue("cat"));
+//        AnimalShelter test = new AnimalShelter();
+//        Animal animal = new Cat();
+//        test.enqueue(animal);
+//        System.out.println(test.dequeue("cat"));
+//        System.out.println(test.dequeue("cat"));
 
+        String test = "{}{Code}[Fellows](())";
 
+        System.out.println(validateBrackets(test));
 
+    }
 
+    public static boolean validateBrackets(String code){
+        Stack<Character> codeStack = new Stack<>();
+        for (int i = 0; i < code.length(); i++) {
+            if (code.charAt(i) == '{' || code.charAt(i) == '(' || code.charAt(i) == '['){
+                codeStack.push(code.charAt(i));
 
+            }else if (code.charAt(i) == '}' && !codeStack.isEmpty() && codeStack.peek() =='{'){
+                    codeStack.pop();
+            }else if( code.charAt(i) == ')' && !codeStack.isEmpty() && codeStack.peek() =='('){
+                codeStack.pop();
+            }else if (code.charAt(i) == ']' && !codeStack.isEmpty() && codeStack.peek() =='['){
+                codeStack.pop();
+            }
+            }
+        return codeStack.isEmpty();
     }
 }

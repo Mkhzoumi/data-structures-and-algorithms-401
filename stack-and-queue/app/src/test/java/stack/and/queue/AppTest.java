@@ -89,8 +89,6 @@ class AppTest {
 
     }
 
-
-
     @Test void stackQueuePsudo(){
 
         // testing that its enqueue properly
@@ -110,6 +108,19 @@ class AppTest {
         //testing that dequeueing from an empty queue should return null
         PseudoQueue<Integer> test1 = new PseudoQueue<>();
         assertNull(test1.dequeue());
+    }
+
+
+    @Test void validateBracketsTest(){
+        // testing for a curect brackets
+        String test = "{}(){}";
+        assertTrue(App.validateBrackets(test));
+
+
+        // testing for a wrong brackets
+        test = "[({}]";
+        assertFalse(App.validateBrackets(test));
+
     }
 }
 
