@@ -40,5 +40,18 @@ class AppTest {
 //        Can successfully return a collection from a postorder traversal
         assertEquals("[3, 5, 1]",testBinary2.postOrder(testBinary2.root).toString());
 
+
+
+        //lab 16 tests for method maximum
+        // check for maximum in a normal binary tree
+        assertEquals(5,testBinary2.maximum());
+
+
+        // check for maximum in an empty tree
+        assertEquals(0,testBinary.maximum());
+
+
+
+
     }
 }

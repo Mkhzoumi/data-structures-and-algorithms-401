@@ -19,13 +19,13 @@ public class App {
         test.root.leftChild.rightChild=new Node<>(4);
 
 
-        test.add(1);
+//        test.add(1);
+//
+//
+//
+//        System.out.println(test.contains(3,test.root));
 
-
-
-        System.out.println(test.contains(3,test.root));
-
-        System.out.println(test.inOrder(test.root).toString());
+        System.out.println(test.maximum());
 
 
 
