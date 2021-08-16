@@ -42,13 +42,28 @@ class AppTest {
 
 
 
-        //lab 16 tests for method maximum
+        //challenge 16 tests for method maximum
         // check for maximum in a normal binary tree
         assertEquals(5,testBinary2.maximum());
 
 
         // check for maximum in an empty tree
         assertEquals(0,testBinary.maximum());
+
+
+
+
+
+
+
+        //challenge 17 tests
+        //check for a normal binary tree
+        assertEquals("[1, 3, 5]",App.breadthFirst(testBinary2).toString());
+
+
+        //check for an empty tree
+        assertEquals("[]",App.breadthFirst(testBinary).toString());
+
 
 
 
