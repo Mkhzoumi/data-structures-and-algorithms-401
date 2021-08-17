@@ -68,5 +68,32 @@ class AppTest {
 
 
 
+
+        //challenge 18 tests
+        KaryTree<Integer> test = new KaryTree<>(4);
+        test.add(3);
+        test.add(5);
+        test.add(15);
+        test.add(1);
+        KaryTree<String> test2=  App.fizzBuzzTree(test);
+
+        //If the value is divisible by 3, replace the value with “Fizz”
+        assertEquals("Fizz",test2.root.value);
+
+        //If the value is divisible by 5, replace the value with “Buzz”
+        assertEquals("Buzz",test2.root.allChildren.get(0).value);
+
+        //If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+        assertEquals("FizzBuzz",test2.root.allChildren.get(1).value);
+
+        //If the value is not divisible by 3 or 5, simply turn the number into a String.
+        assertEquals("1",test2.root.allChildren.get(2).value);
+
+
+
+
+
+
+
     }
 }

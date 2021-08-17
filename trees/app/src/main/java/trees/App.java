@@ -17,12 +17,12 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-
-        BinarySearchTree<Integer> test = new BinarySearchTree<>(5);
-        test.root.leftChild = new Node<>(3);
-        test.root.rightChild = new Node<>(6);
-        test.root.leftChild.leftChild = new Node<>(2);
-        test.root.leftChild.rightChild = new Node<>(4);
+//
+//        BinarySearchTree<Integer> test = new BinarySearchTree<>(5);
+//        test.root.leftChild = new Node<>(3);
+//        test.root.rightChild = new Node<>(6);
+//        test.root.leftChild.leftChild = new Node<>(2);
+//        test.root.leftChild.rightChild = new Node<>(4);
 
 
 //        test.add(1);
@@ -32,7 +32,18 @@ public class App {
 //        System.out.println(test.contains(3,test.root));
 
 //        System.out.println(test.maximum());
-        System.out.println(breadthFirst(test));
+//        System.out.println(breadthFirst(test));
+
+
+
+        KaryTree<Integer> test = new KaryTree<>(3);
+        test.add(3);
+        test.add(4);
+        test.add(6);
+
+
+        System.out.println(fizzBuzzTree(test).root.value);
+
     }
 
 
@@ -54,5 +65,35 @@ public class App {
             }
         }
         return values;
+    }
+
+
+
+    public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> tree){
+        KaryTree<String> newTree = new KaryTree<>(tree.K);
+        Queue<Knode<Integer>> newQueue = new LinkedList<>();
+        if(tree.root != null){
+            newQueue.add(tree.root);
+            while(!newQueue.isEmpty()){
+                Knode<Integer> current = newQueue.poll();
+                String currentValue;
+                if(current.value % 3 == 0 && current.value % 5 == 0)
+                    currentValue = "FizzBuzz";
+                else if((int)current.value % 3 == 0){
+                    currentValue="Fizz";
+                }
+                else if((int)current.value % 5 == 0){
+                    currentValue="Buzz";
+                }
+                else{
+                    currentValue=current.value.toString();
+                }
+                newTree.add(currentValue);
+                if(! current.allChildren.isEmpty()){
+                    newQueue.addAll(current.allChildren);
+                }
+            }
+        }
+        return newTree;
     }
 }
