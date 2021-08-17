@@ -18,6 +18,8 @@
 | validate brackets                  | [link](stack-queue-brackets/README.md)                |
 | tree max                           | [link](tree-max/README.md)                            |
 | tree-breadth-first                 | [link](tree-breadth-first/README.md)                  |
+| tree-fizz-buzz                     | [link](tree-fizz-buzz/README.md)                      |
+
 
 
 
