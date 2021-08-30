@@ -16,6 +16,12 @@ class AppTest {
         int[] testing = {8,4,23,42,16,15};
         int[] result = {4,8,15,16,23,42};
         assertEquals(result,App.insertionSort(testing));
+
+
+
+        
+        // mergeSort
+        assertEquals(result,App.mergeSort(testing));
     }
 
 }

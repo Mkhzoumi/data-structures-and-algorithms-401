@@ -19,6 +19,12 @@
 | tree max                           | [link](tree-max/README.md)                            |
 | tree-breadth-first                 | [link](tree-breadth-first/README.md)                  |
 | tree-fizz-buzz                     | [link](tree-fizz-buzz/README.md)                      |
+| Insertion-Sort-readme              | [link](Insertion-Sort/README.md)                      |
+| Insertion-Sort-BLOG                | [link](Insertion-Sort/BLOG.md)                        |
+| Merge-Sort-readme                  | [link](mergeSort/README.md)                           |
+| Merge-Sort-BLOG                    | [link](mergeSort/BLOG.md)                             |
+
+
 
 
 
