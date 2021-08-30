@@ -5,6 +5,8 @@ package Insertion.Sort;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static Insertion.Sort.App.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,7 +17,7 @@ class AppTest {
 
         int[] testing = {8,4,23,42,16,15};
         int[] result = {4,8,15,16,23,42};
-        assertEquals(result,App.insertionSort(testing));
+        assertEquals(Arrays.toString(result),Arrays.toString(insertionSort(testing)));
     }
 
 }
