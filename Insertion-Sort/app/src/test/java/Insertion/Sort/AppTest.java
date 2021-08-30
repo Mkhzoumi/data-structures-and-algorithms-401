@@ -25,7 +25,7 @@ class AppTest {
 
         
         // mergeSort
-        assertEquals(result,App.mergeSort(testing));
+        assertEquals(Arrays.toString(result),Arrays.toString(App.mergeSort(testing)));
 
     }
 
