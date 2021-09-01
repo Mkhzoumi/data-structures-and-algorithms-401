@@ -23,6 +23,8 @@
 | Insertion-Sort-BLOG                | [link](Insertion-Sort/BLOG.md)                        |
 | Merge-Sort-readme                  | [link](mergeSort/README.md)                           |
 | Merge-Sort-BLOG                    | [link](mergeSort/BLOG.md)                             |
+| quick-Sort-readme                  | [link](quickSort/README.md)                           |
+| quick-Sort-Blog                    | [link](quickSort/BLOG.md)                             |
 
 
 

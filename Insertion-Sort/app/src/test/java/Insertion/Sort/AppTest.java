@@ -27,6 +27,12 @@ class AppTest {
         // mergeSort
         assertEquals(Arrays.toString(result),Arrays.toString(App.mergeSort(testing)));
 
+
+
+
+
+        // quick sort
+        assertEquals(Arrays.toString(result),Arrays.toString(quickSort(testing, 0, testing.length-1)));
     }
 
 }
