@@ -25,6 +25,8 @@
 | Merge-Sort-BLOG                    | [link](mergeSort/BLOG.md)                             |
 | quick-Sort-readme                  | [link](quickSort/README.md)                           |
 | quick-Sort-Blog                    | [link](quickSort/BLOG.md)                             |
+| hashtable                          | [link](hashtable/README.md)                           |
+
 
 
 
