@@ -26,6 +26,8 @@
 | quick-Sort-readme                  | [link](quickSort/README.md)                           |
 | quick-Sort-Blog                    | [link](quickSort/BLOG.md)                             |
 | hashtable                          | [link](hashtable/README.md)                           |
+| hashmap-repeated-word              | [link](hashmap-repeated-word/README.md)               |
+
 
 
 
