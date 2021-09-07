@@ -5,6 +5,7 @@ package trees;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import static trees.App.treeIntersection;
 
 class AppTest {
     @Test void appHasAGreeting() {
@@ -77,13 +78,13 @@ class AppTest {
         test.add(1);
         KaryTree<String> test2=  App.fizzBuzzTree(test);
 
-        //If the value is divisible by 3, replace the value with “Fizz”
+        //If the value is divisible by 3, replace the value with Fizz
         assertEquals("Fizz",test2.root.value);
 
-        //If the value is divisible by 5, replace the value with “Buzz”
+        //If the value is divisible by 5, replace the value with Buzz
         assertEquals("Buzz",test2.root.allChildren.get(0).value);
 
-        //If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+        //If the value is divisible by 3 and 5, replace the value with FizzBuzz
         assertEquals("FizzBuzz",test2.root.allChildren.get(1).value);
 
         //If the value is not divisible by 3 or 5, simply turn the number into a String.
@@ -91,6 +92,43 @@ class AppTest {
 
 
 
+
+
+
+
+        // challenge 32 the intersection between two binary trees
+
+        BinaryTree<Integer> tree1 = new BinaryTree<>(150);
+        tree1.root.rightChild = new Node<>(250);
+        tree1.root.leftChild = new Node<>(100) ;
+        tree1.root.rightChild.rightChild = new Node<>(350);
+        tree1.root.rightChild.rightChild.rightChild =new Node<>(500) ;
+        tree1.root.rightChild.rightChild.leftChild =new Node<>(300) ;
+        tree1.root.rightChild.leftChild =new Node<>(200) ;
+        tree1.root.leftChild.leftChild =new Node<>(75) ;
+        tree1.root.leftChild.rightChild =new Node<>(160) ;
+        tree1.root.leftChild.rightChild.leftChild =new Node<>(125) ;
+        tree1.root.leftChild.rightChild.rightChild =new Node<>(175);
+
+
+
+
+        BinaryTree<Integer> tree2 = new BinaryTree<>(42);
+        tree2.root.rightChild =new Node<>(600) ;
+        tree2.root.leftChild =new Node<>(100) ;
+        tree2.root.rightChild.rightChild =new Node<>(350) ;
+        tree2.root.rightChild.rightChild.rightChild =new Node<>(500);
+        tree2.root.rightChild.rightChild.leftChild =new Node<>(4);
+        tree2.root.rightChild.leftChild =new Node<>(200);
+        tree2.root.leftChild.leftChild = new Node<>(15);
+        tree2.root.leftChild.rightChild = new Node<>(160);
+        tree2.root.leftChild.rightChild.leftChild = new Node<>(125);
+        tree2.root.leftChild.rightChild.rightChild =new Node<>(175);
+
+
+        System.out.println(treeIntersection(tree1, tree2).toString());
+
+        assertEquals("[100, 160, 125, 175, 200, 350, 500, 100, 160, 125, 175, 200, 350, 500]", treeIntersection(tree1, tree2).toString());
 
 
 

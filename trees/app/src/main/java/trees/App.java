@@ -3,11 +3,7 @@
  */
 package trees;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class App {
     public String getGreeting() {
@@ -15,9 +11,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+//        System.out.println(new App().getGreeting());
 
-//
+
 //        BinarySearchTree<Integer> test = new BinarySearchTree<>(5);
 //        test.root.leftChild = new Node<>(3);
 //        test.root.rightChild = new Node<>(6);
@@ -35,15 +31,66 @@ public class App {
 //        System.out.println(breadthFirst(test));
 
 
+        BinaryTree<Integer> tree1 = new BinaryTree<>(150);
+        tree1.root.rightChild = new Node<>(250);
+        tree1.root.leftChild = new Node<>(100) ;
+        tree1.root.rightChild.rightChild = new Node<>(350);
+        tree1.root.rightChild.rightChild.rightChild =new Node<>(500) ;
+        tree1.root.rightChild.rightChild.leftChild =new Node<>(300) ;
+        tree1.root.rightChild.leftChild =new Node<>(200) ;
+        tree1.root.leftChild.leftChild =new Node<>(75) ;
+        tree1.root.leftChild.rightChild =new Node<>(160) ;
+        tree1.root.leftChild.rightChild.leftChild =new Node<>(125) ;
+        tree1.root.leftChild.rightChild.rightChild =new Node<>(175) ;
 
-        KaryTree<Integer> test = new KaryTree<>(3);
-        test.add(3);
-        test.add(4);
-        test.add(6);
 
 
-        System.out.println(fizzBuzzTree(test).root.value);
 
+        BinaryTree<Integer> tree2 = new BinaryTree<>(42);
+        tree2.root.rightChild =new Node<>(600) ;
+        tree2.root.leftChild =new Node<>(100) ;
+        tree2.root.rightChild.rightChild =new Node<>(350) ;
+        tree2.root.rightChild.rightChild.rightChild =new Node<>(500) ;
+        tree2.root.rightChild.rightChild.leftChild =new Node<>(4) ;
+        tree2.root.rightChild.leftChild =new Node<>(200) ;
+        tree2.root.leftChild.leftChild = new Node<>(15);
+        tree2.root.leftChild.rightChild = new Node<>(160);
+        tree2.root.leftChild.rightChild.leftChild = new Node<>(125);
+        tree2.root.leftChild.rightChild.rightChild =new Node<>(175) ;
+
+
+        System.out.println(treeIntersection(tree1, tree2).toString());
+
+
+
+
+
+
+//        KaryTree<Integer> test = new KaryTree<>(3);
+//        test.add(3);
+//        test.add(4);
+//        test.add(6);
+//
+//
+//        System.out.println(fizzBuzzTree(test).root.value);
+
+    }
+
+
+    public static ArrayList treeIntersection(BinaryTree tree1 , BinaryTree tree2){
+        if (tree1.root == null || tree2.root == null){
+            return null;
+        }
+        ArrayList tree1List = tree1.preOrder(tree1.root);
+        ArrayList tree2List = tree2.preOrder(tree2.root);
+        ArrayList intersection = new ArrayList();
+
+        for (int i = 0; i < tree1List.size(); i++) {
+            if( (int)tree1List.get(i) == (int)tree2List.get(i)){
+                intersection.add(tree1List.get(i));
+            }
+        }
+        return intersection;
     }
 
 
