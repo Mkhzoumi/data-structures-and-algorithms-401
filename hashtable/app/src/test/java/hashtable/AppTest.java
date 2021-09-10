@@ -16,19 +16,19 @@ class AppTest {
 //        Adding a key/value to your hashtable results in the value being in the data structure
         HashTable testingTable = new HashTable<>(10);
 
-        testingTable.add("test","testing adding");
+        testingTable.add("test","test adding");
         assertEquals(true ,testingTable.contains("test"));
 
 
 
 
 //        Retrieving based on a key returns the value stored
-        assertEquals("test adding",testingTable.get("hi"));
+        assertEquals("test adding",testingTable.get("test"));
 
 
 
 //        Successfully returns null for a key that does not exist in the hashtable
-        assertEquals(" Wrong Key",testingTable.get("hello"));
+        assertEquals("this key is not existed",testingTable.get("hello"));
 
 
 //        Successfully handle a collision within the hashtable
@@ -36,7 +36,7 @@ class AppTest {
         testingTable.add(97,"this is the second");
 
         assertEquals("this is the first",testingTable.arrayOfNodes[7].value);
-        assertEquals("this is the second",testingTable.arrayOfNodes[7].next.value));
+        assertEquals("this is the second",testingTable.arrayOfNodes[7].next.value);
 
 
 //        Successfully retrieve a value from a bucket within the hashtable that has a collision
