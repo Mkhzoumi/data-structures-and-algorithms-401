@@ -10,5 +10,19 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        Graph<String> testing = new Graph<>();
+        Node a = testing.addNode("A");
+       Node b =  testing.addNode("b");
+        Node c = testing.addNode("c");
+        Node d = testing.addNode("d");
+
+        testing.addEdge(a,b,true);
+        testing.addEdge(b,c,true);
+        testing.addEdge(c,d,true);
+        testing.addEdge(b,d,true);
+
+        testing.breadthFirst(a);
+
     }
 }
