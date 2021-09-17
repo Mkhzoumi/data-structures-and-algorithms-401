@@ -11,18 +11,49 @@ public class App {
     public static void main(String[] args) {
 //        System.out.println(new App().getGreeting());
 
-        Graph<String> testing = new Graph<>();
-        Node a = testing.addNode("A");
-       Node b =  testing.addNode("b");
-        Node c = testing.addNode("c");
-        Node d = testing.addNode("d");
+//        Graph<String> testing = new Graph<String>();
+//        Node a = testing.addNode("A");
+//       Node b =  testing.addNode("b");
+//        Node c = testing.addNode("c");
+//        Node d = testing.addNode("d");
+//
+//        testing.addEdge(a,b,true);
+//        testing.addEdge(a,c,true);
+//        testing.addEdge(c,d,true);
+//        testing.addEdge(b,d,true);
+//
+//        testing.breadthFirst(a);
 
-        testing.addEdge(a,b,true);
-        testing.addEdge(b,c,true);
-        testing.addEdge(c,d,true);
-        testing.addEdge(b,d,true);
 
-        testing.breadthFirst(a);
+
+//        A, B, C, G, D, E, H, F
+        Graph<String> graph = new Graph<>();
+
+        Node a = graph.addNode("A");
+        Node b =  graph.addNode("B");
+        Node c = graph.addNode("C");
+        Node d = graph.addNode("D");
+        Node e = graph.addNode("E");
+        Node f = graph.addNode("F");
+        Node g = graph.addNode("G");
+        Node h = graph.addNode("H");
+
+
+        graph.addEdge(a,b,true);
+        graph.addEdge(a,d,true);
+        graph.addEdge(b,c,true);
+        graph.addEdge(b,d,true);
+        graph.addEdge(c,g,true);
+        graph.addEdge(d,e,true);
+        graph.addEdge(d,h,true);
+        graph.addEdge(d,f,true);
+        graph.addEdge(h,f,true);
+
+
+
+
+
+        graph.depthFirst(a);
 
     }
 }
