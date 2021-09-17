@@ -5,6 +5,9 @@ import java.util.*;
 public class Graph<T> {
     Map<Node<T>, List<Node<T>>> graph = new HashMap<>();
 
+    List<Node<T>> preOrder = new ArrayList<>();
+
+
 
     public Graph() {
     }
@@ -106,6 +109,23 @@ public class Graph<T> {
             System.out.print(list.get(i).value+"    ");
         }
         return list;
+    }
+
+
+
+
+    public List<Node<T>> depthFirst(Node<T> root) {
+        this.preOrder.add(root);
+        System.out.print(root.value + "    ");
+
+        if (!graph.get(root).isEmpty()) {
+            for (int i = 0; i < graph.get(root).size(); i++) {
+                if (!preOrder.contains(graph.get(root).get(i))) {
+                    depthFirst(graph.get(root).get(i));
+                }
+            }
+        }
+        return preOrder;
     }
 
 
